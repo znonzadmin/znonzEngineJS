@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试弹窗插件-模仿书写弹窗插件</title>
+</head>
+<body>
+  <div id="divCode">点击测试弹窗</div>
+  <script type="text/javascript" src="engine/engine.js"></script>
+  <script type="text/javascript" src="engine/alert.js"></script>
+  <script type="text/javascript">
+
+    j("divCode").click(function (e) {
+        /*if (j.target(e).nodeName.toLowerCase() == "input") {
+            eval(j(j.target(e).id.replace('btn', 'pre')).text());
+        }*/
+/*        j.msg({
+          content: "hello world " + j.random(10*Math.random()),  //消息
+          time: 8,    //倒计时8秒 默认4秒 0为不关闭
+          single: false,  //允许弹窗多个 默认弹窗一个
+          drag: true  //可拖动
+      });*/
+          j.confirm({
+              title: "Message",
+              content: "hello world " + j.random(),
+              cancelValue: "否",
+              okValue: "是"
+          });
+    })
+
+
+
+  </script>
+
+</body>
+</html>
